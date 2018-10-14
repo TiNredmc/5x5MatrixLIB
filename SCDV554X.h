@@ -15,10 +15,10 @@ class SCDV554X {
     void clear();
     //void sendDigitData(int digit, char *digitData);
     void writeCharacter(int digit,char whatCharacter); //instead sendDigitdata
+	void writeStringScrolling(String text, int speed);
 	void setBrightness(int percent);
     void setPowerdownMode(boolean on);
     void setLampTest(boolean on);
 	void bitbang(unsigned char code);
-	
 };
 #endif

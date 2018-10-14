@@ -71,3 +71,18 @@ if (digit < 0 || digit > 3)
     bitbang(pgm_read_byte(&Font5x5[((whatCharacter - 0x20) * 5) + row]));
   }
 }
+
+void SCDV554X::writeStringScrolling(String text, int speed){
+  text = "    "+text+"    ";
+  int l = text.length()+1;
+  byte b[l];
+  text.getBytes(b,l);
+  for(int i = 0; i<l-4; i++){
+    writeCharacter(3,b[0+i]);
+	writeCharacter(2,b[1+i]);
+    writeCharacter(1,b[2+i]);
+    writeCharacter(0,b[3+i]);
+    delay(speed);
+  }
+  clear();
+}
