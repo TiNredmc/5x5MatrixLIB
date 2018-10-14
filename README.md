@@ -1,6 +1,8 @@
 # 5x5MatrixLIB
 for Infineon/SIEMENS/OSRAM Intelligent Display (5x5) ROMless series ONLY
 
+# Tested Platform
+-NodeMCU -Arduino AVR ATMEGA328 
 Supported Device in listed down below (X is LED's color,Y is Package)
 =
 SCD558X(A) series
