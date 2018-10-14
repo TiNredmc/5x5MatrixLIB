@@ -1,7 +1,7 @@
 # 5x5MatrixLIB
 for Infineon/SIEMENS/OSRAM Intelligent Display (5x5) ROMless series ONLY
 
-Supported Device in listed down below (X mean color or LED,Y is Package)
+Supported Device in listed down below (X is LED's color,Y is Package)
 =
 SCD558X(A) series
 SCD5510X   series
