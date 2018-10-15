@@ -1,13 +1,13 @@
-#ifndef 5x5MatrixLIB_h
-#define 5x5MatrixLIB_h
+#ifndef MatrixLIB_h
+#define MatrixLIB_h
 
 #include "Arduino.h"
 
-class 5x5MatrixLIB {
+class MatrixLIB {
   private:
     int m_clock, m_data, m_load;
   public:
-    5x5MatrixLIB(int clock, int data, int load)
+    MatrixLIB(int clock, int data, int load)
       : m_clock(clock)
       , m_data(data)
       , m_load(load) {}
