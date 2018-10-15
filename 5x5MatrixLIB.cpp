@@ -54,16 +54,8 @@ void 5x5MatrixLIB::begin()//init the display and clear previous data.
   clear();
 }
 
-/*void 5x5MatrixLIB::sendDigitData(int digit, char *rowData)//sent the character,Using the character Hex code in datasheet 
+void 5x5MatrixLIB::writeCharacter(int digit,char whatCharacter)//set specific character individually
 {
-  if (digit < 0 || digit > 3)
-    return;
-  bitbang(0xa0 + digit);
-  for (int row = 0; row < 5; row++) {
-    bitbang(rowData[row] | row << 5);
-  }
-}*/
-void 5x5MatrixLIB::writeCharacter(int digit,char whatCharacter) {
 if (digit < 0 || digit > 3)
     return;
   bitbang(0xa0 + digit);  
@@ -72,7 +64,8 @@ if (digit < 0 || digit > 3)
   }
 }
 
-void 5x5MatrixLIB::writeStringScrolling(String text, int speed){
+void 5x5MatrixLIB::writeStringScrolling(String text, int speed)//Scroll text with speed (Delay is for how long to wait the characters to move to next digit)
+{
   text = "    "+text+"    ";
   int l = text.length()+1;
   byte b[l];
