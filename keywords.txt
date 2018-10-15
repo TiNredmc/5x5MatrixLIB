@@ -1,0 +1,8 @@
+5x5MatrixLIB                KEYWORD1
+bitbang                     KEYWORD2
+begin                       KEYWORD2
+clear                       KEYWORD2
+setBrigthness               KEYWORD2
+writeStringScrolling        KEYWORD2
+setPowerDownMode            KEYWORD2
+setLampTest                 KEYWORD2
