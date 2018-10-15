@@ -11,14 +11,13 @@ class 5x5MatrixLIB {
       : m_clock(clock)
       , m_data(data)
       , m_load(load) {}
-    void begin();
-    void clear();
-    //void sendDigitData(int digit, char *digitData);
-    void writeCharacter(int digit,char whatCharacter); //instead sendDigitdata
-	void writeStringScrolling(String text, int speed);
-	void setBrightness(int percent);
-    void setPowerdownMode(boolean on);
-    void setLampTest(boolean on);
-	void bitbang(unsigned char code);
+	void begin();//begin the code and clear previous data 
+	void clear();//cler the display 
+	void writeCharacter(int digit,char whatCharacter);//wite the character to the digit individually  
+	void writeStringScrolling(String text, int speed);//scroll text,delay is the moving delay between digit
+	void setBrightness(int percent);//set the brightness of the display 
+	void setPowerdownMode(boolean on);//Pwer saving mode of the display 
+	void setLampTest(boolean on);//Test the display lamp
+	void bitbang(unsigned char code);//send the hex or binary to the display (SPI-like)
 };
 #endif
