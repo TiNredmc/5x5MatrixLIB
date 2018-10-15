@@ -8,7 +8,7 @@
 #endif
 #include <string.h>
 
-void 5x5MatrixLIB::bitbang(unsigned char code) //for loading the data to the display 
+void MatrixLIB::bitbang(unsigned char code) //for loading the data to the display 
     {
       digitalWrite(m_load, LOW);
       for (int i = 0; i < 8; i++) {
@@ -20,17 +20,17 @@ void 5x5MatrixLIB::bitbang(unsigned char code) //for loading the data to the dis
       digitalWrite(m_load, HIGH);
     }
 	
-void 5x5MatrixLIB::clear()//clear the display 
+void MatrixLIB::clear()//clear the display 
 {
   bitbang(0xc0);
 }
 
-void 5x5MatrixLIB::setBrightness(int percent)//set the display brightness 
+void MatrixLIB::setBrightness(int percent)//set the display brightness 
 {
   bitbang(0xf0 + map(percent, 0, 100, 6, 0));
 }
 
-void 5x5MatrixLIB::setPowerdownMode(boolean on)//powerdown the display 
+void MatrixLIB::setPowerdownMode(boolean on)//powerdown the display 
 {
   if (on)
     bitbang(0xff);
@@ -38,7 +38,7 @@ void 5x5MatrixLIB::setPowerdownMode(boolean on)//powerdown the display
     setBrightness(100);
 }
 
-void 5x5MatrixLIB::setLampTest(boolean on)//test all LED on the display 
+void MatrixLIB::setLampTest(boolean on)//test all LED on the display 
 {
   if (on)
     bitbang(0xf8);
@@ -46,7 +46,7 @@ void 5x5MatrixLIB::setLampTest(boolean on)//test all LED on the display
     clear();
 }
 
-void 5x5MatrixLIB::begin()//init the display and clear previous data.
+void MatrixLIB::begin()//init the display and clear previous data.
 {
   pinMode(m_clock, OUTPUT);
   pinMode(m_data, OUTPUT);
@@ -54,7 +54,7 @@ void 5x5MatrixLIB::begin()//init the display and clear previous data.
   clear();
 }
 
-void 5x5MatrixLIB::writeCharacter(int digit,char whatCharacter)//set specific character individually
+void MatrixLIB::writeCharacter(int digit,char whatCharacter)//set specific character individually
 {
 if (digit < 0 || digit > 3)
     return;
@@ -64,7 +64,7 @@ if (digit < 0 || digit > 3)
   }
 }
 
-void 5x5MatrixLIB::writeStringScrolling(String text, int speed)//Scroll text with speed (Delay is for how long to wait the characters to move to next digit)
+void MatrixLIB::writeStringScrolling(String text, int speed)//Scroll text with speed (Delay is for how long to wait the characters to move to next digit)
 {
   text = "    "+text+"    ";
   int l = text.length()+1;
