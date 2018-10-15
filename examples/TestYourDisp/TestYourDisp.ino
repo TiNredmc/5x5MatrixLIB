@@ -2,7 +2,8 @@
 
 5x5MatrixLIB Disp(2,3,4); //SDCLK DATA LOAD
 
-void setup(){
+void setup()
+{
 Disp.begin();
 delay(500);
 Disp.setLamptest(on);
@@ -11,10 +12,10 @@ Disp.setLamptest(off);
 delay(100);
 Disp.setBrightness(100);
 Disp.clear();
-
 }
 
-void loop(){
+void loop()
+{
 Disp.writeStringScrolling("Testing...",);
 Disp.writeCharacter(0,'T');
 Disp.writeCharacter(1,'L');
