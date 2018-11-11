@@ -2,7 +2,7 @@
 #include "5x5MatrixLIB.h"
 #include "font5x5.h"
 #if (defined(__AVR__))
-#include <avr\pgmspace.h>
+#include <avr/pgmspace.h>
 #else
 #include <pgmspace.h>
 #endif
