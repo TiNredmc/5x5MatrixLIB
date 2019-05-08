@@ -28,3 +28,7 @@ CREDITS
 Update 2018/10/15
 =
 I had uploade the latest renamed Library.Will test this newer version soon
+
+Update 2019/05/08
+=
+I'm working on the bitmap feature. And FakeGrayscale project will start soon
