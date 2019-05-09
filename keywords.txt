@@ -7,5 +7,5 @@ writeStringScrolling        KEYWORD2
 writeCharacter              KEYWORD2
 setPowerDownMode            KEYWORD2
 setLampTest                 KEYWORD2
-drawBitmap		              KEYWORD2
-drawBitmapPgm		            KEYWORD2
+drawBitmap		    KEYWORD2
+drawBitmapPgm		    KEYWORD2
