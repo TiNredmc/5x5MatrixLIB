@@ -79,3 +79,23 @@ void MatrixLIB::writeStringScrolling(String text, int speed)//Scroll text with s
   }
   clear();
 }
+
+void MatrixLIB::drawBitmap(int digit, const char data[])// draw 5x5 bitmap image on an specified digit 
+{
+if (digit < 0 || digit > 3)
+    return;
+  bitbang(0xa0 + digit);  
+  for (int row = 0; row < 5; row++) {
+    bitbang(data[row]);
+  }
+}
+
+void MatrixLIB::drawBitmapPgm(int digit, const char data[])// draw 5x5 progmem's bitmap image on an specified digit 
+{
+if (digit < 0 || digit > 3)
+    return;
+  bitbang(0xa0 + digit);  
+  for (int row = 0; row < 5; row++) {
+    bitbang(pgm_read_byte(&data[row]));
+  }	  
+}
