@@ -15,7 +15,7 @@ High Efficiency Green SCDQ5544P/Q/R
 // standard ascii 5x5 font
 // defines ascii characters 0x41-0x7a (32-127)
 //static unsigned char Font5x5[] = {
-const unsigned char __attribute__ ((progmem)) Font5x5[] = {
+const unsigned char __attribute__ PROGMEM Font5x5[] = {
 // ' ':
   0x00, 0x20, 0x40, 0x60, 0x80,
 // '!':
