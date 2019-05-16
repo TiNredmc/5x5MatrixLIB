@@ -12,8 +12,8 @@ for Infineon/SIEMENS/OSRAM Intelligent Display (5x5) ROMless series ONLY
 Supported Device in listed down below (X is LED's color,Y is Package)
 =
 ```
-SCD558X(A) series
-SCD5510X   series //Needs to edit code 
+SCD558X(A) series //Need to add > 4 digit (8 digit)
+SCD5510X   series //Needs to add > 4 digit (10 digit)
 SCDV554X   series
 SCE574X    series
 SCE578X    series
